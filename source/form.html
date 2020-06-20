@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="js/picturefill.js" async=""></script>
+    <title>HTML Academy. Проект Cat Energy</title>
+  </head>
+  <body class="page-body">
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <nav class="main-nav">
+          <div class="main-nav__container">
+            <a class="main-nav__logo-wrapper" href="index.html">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="main-nav__logo" src="img/logo-mobile.svg" alt="Cat Energy. Питание для котов" width="191" height="39">
+              </picture>
+            </a>
+            <button class="main-nav__toggle" type="button" aria-label="Показать/Скрыть меню"></button>
+          </div>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link  main-nav__link--active" href="">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main-page main-page--form">
+      <h1 class="title form-title">Подбор программы</h1>
+      <p class="form-heading">
+        Заполните анкету и мы подберем<br> программу питания для вашего кота
+      </p>
+      <form class="form" action="https://echo.htmlacademy.ru" method="POST">
+        <fieldset class="form__fieldset cat-data">
+          <legend class="visually-hidden form__legend">Данные кота</legend>
+          <div class="form__fields">
+            <div class="form__item">
+              <label class="form__label" for="cat-name"> Имя:*</label>
+              <div class="form__field-item">
+                <input class="form__input" type="text" name="cat-name" id="cat-name" value="" placeholder="Барсик" required="">
+              </div>
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="cat-weight"> Вес (кг):*</label>
+              <div class="form__field-item">
+                <input class="form__input" type="number" name="cat-weight" min="1" max="20" step="1" id="cat-weight" value="" placeholder="7" required="">
+              </div>
+            </div>
+            <div class="form__item">
+              <label class="form__label" for="cat-age"> Возраст (лет):</label>
+              <div class="form__field-item">
+                <input class="form__input" type="number" name="cat-age" min="1" max="20" step="1" id="cat-age" value="" placeholder="7">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset program-choose">
+          <legend class="visually-hidden form__legend">Выберите подходящую программу</legend>
+          <ul class="program-choose__list">
+            <li class="program-choose__list-item">
+              <input class="visually-hidden program-choose__radio" type="radio" name="program" value="slim" id="programm-choose__item--first" checked="" onclick="this.blur();">
+              <label class="form__label form__label--program-choose" for="programm-choose__item--first">Похудение</label>
+            </li>
+            <li class="program-choose__list-item">
+              <input class="visually-hidden program-choose__radio" type="radio" name="program" value="mass-gain" id="programm-choose__item--second" onclick="this.blur();">
+              <label class="form__label form__label--program-choose" for="programm-choose__item--second">Набор массы</label>
+            </li>
+            <li class="program-choose__list-item">
+              <input class="visually-hidden program-choose__radio" type="radio" name="program" value="needs-advice" id="programm-choose__item--third" onclick="this.blur();">
+              <label class="form__label form__label--program-choose" for="programm-choose__item--third">Не знаю (Нужен ваш совет)</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__fieldset owner-data">
+          <legend class="form__legend title title--green-line">
+            <span class="title__inner">
+              Контактные данные<br class="owner-data__title-hide"> (владельца кота)
+            </span>
+          </legend>
+          <div class="form__fields owner-data__fields">
+            <div class="form__item owner-data__item">
+              <label class="form__label" for="owner-email">E-mail:*</label>
+              <div class="form__field-item">
+                <input class="form__input form__input--email owner-data__input" type="email" name="email" id="owner-email" value="" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" placeholder="kuklachev@gmail.com" required="">
+                <span class="owner-data__icon-wrapper">
+                  <svg class="owner-data__icon owner-data__icon--mail" width="17" height="13">
+                    <use xlink:href="#icon-mail"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            <div class="form__item owner-data__item">
+              <label class="form__label" for="owner-phone">Телефон:*</label>
+              <div class="form__field-item">
+                <input class="form__input form__input--phone owner-data__input" type="tel" name="tel" id="owner-phone" minlength="17" maxlength="17" value="" pattern="8" placeholder="8 (960) 900-60-90" required="">
+                <span class="owner-data__icon-wrapper">
+                  <svg class="owner-data__icon owner-data__icon--phone" width="20" height="20">
+                    <use xlink:href="#icon-phone"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset comment">
+          <legend class="form__legend comment__title title title--green-line">
+            <span class="title__inner">
+              Комментарий
+            </span>
+          </legend>
+          <div class="comment__field-wrapper">
+            <textarea class="comment__field form__input" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset form-additional">
+          <legend class="form__legend form-additional__title title title--green-line">
+            <span class="title__inner">
+              Дополнительно
+            </span>
+          </legend>
+          <ul class="form-additional__list">
+            <li class="form-additional__item">
+              <input class="visually-hidden form-additional__checkbox" type="checkbox" name="sweetener" id="sweetener-checkbox" checked="" onclick="this.blur();">
+              <label class="form__label form__label--additional-product" for="sweetener-checkbox">
+                Сахарозаменитель
+              </label>
+            </li>
+            <li class="form-additional__item">
+              <input class="visually-hidden form-additional__checkbox" type="checkbox" name="water" id="water-checkbox" onclick="this.blur();">
+              <label class="form__label form__label--additional-product" for="water-checkbox">
+                Питьевая вода
+              </label>
+            </li>
+            <li class="form-additional__item">
+              <input class="visually-hidden form-additional__checkbox" type="checkbox" name="milk" id="milk-checkbox" onclick="this.blur();">
+              <label class="form__label form__label--additional-product" for="milk-checkbox">
+                Молоко
+              </label>
+            </li>
+            <li class="form-additional__item">
+              <input class="visually-hidden form-additional__checkbox" type="checkbox" name="vitamins" id="vitamins-checkbox" onclick="this.blur();">
+              <label class="form__label form__label--additional-product" for="vitamins-checkbox">
+                Витамины
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="form__button-wrapper">
+          <button class="button form__button" type="submit">Отправить заявку</button>
+          <span class="form__required-details">* — Обязательные поля</span>
+          </div>
+      </form>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__contacts page-footer__contacts--layer contacts">
+        <div class="page-footer__contacts-wrapper">
+        <h2 class="title contacts__title">Приглашаем<br> к сотрудничеству <br> дилеров!</h2>
+        <address class="contacts__address">
+          ул. Большая Конюшенная, д. 19/8
+          <span class="contacts__address-town">Санкт-Петербург </span>
+        </address>
+      </div>
+    </div>
+    <div class="page-footer__wrapper">
+      <div class="page-footer__map-wrapper">
+        <div id="map"></div>
+      </div>
+      <div class="page-footer__info">
+        <div class="page-footer__logo-wrapper">
+          <img class="page-footer__logo" src="img/logo-footer.svg" alt="Cat energy. Питание для вашего кота" width="128" height="24">
+        </div>
+        <ul class="page-footer__socials socials">
+          <li class="socials__item">
+            <a class="socials__link"  href="#" title="Вконтакте" aria-label="Вконтакте">
+              <svg class="socials__icon socials__icon--vk" width="22" height="12">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link"  href="#" title="Инстаграм" aria-label="Инстаграм">
+              <svg class="socials__icon socials__icon--insta" width="16.1" height="16">
+                <use xlink:href="#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link" href="#" title="Фейсбук" aria-label="Фейсбук">
+              <svg class="socials__icon socials__icon--fb" width="10" height="19">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright copyright">
+          <span class="copyright__name">HTML Academy</span>
+          <a class="copyright__image-wrapper" href="https://htmlacademy.ru/intensive/adaptive" title="HTML Academy">
+            <svg class="copyright__icon" width="43" height="60">
+              <use xlink:href="#icon-htmlacademy"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU" type="text/javascript"></script>
+    <script>
+    ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [59.938635, 30.323118],
+            zoom: 17
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+            hintContent: 'CAT ENERGY',
+
+        }, {
+
+            iconLayout: 'default#image',
+
+            iconImageHref: 'img/map-pin.png',
+
+            iconImageSize: [75, 63],
+
+            iconImageOffset: [-40, -55]
+        });
+
+    myMap.geoObjects
+        .add(myPlacemark)
+        .add(myPlacemarkWithContent);
+});
+    </script>
+  <script src="js/script.js"></script>
+</body>
+</html>

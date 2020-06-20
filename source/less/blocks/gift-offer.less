@@ -1,0 +1,121 @@
+.gift-offer {
+  min-width: 280px;
+  margin-right: 6.25%;
+  margin-bottom: 35px;
+  margin-left: 6.25%;
+}
+
+.gift-offer__wrapper {
+  height: 290px;
+  border-top: 1px solid transparent;
+
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("..//img/gift-photo-mobile@2x.jpg");
+    background-size: 100% auto;
+  }
+
+  &::before {
+    content: "";
+
+    display: block;
+    width: 56px;
+    height: 61px;
+    margin: 65px;
+    margin-bottom: 60px;
+    margin-left: calc(50% - 28px);
+
+    background-image: url("..//img/icon-gift.svg");
+  }
+}
+
+.gift-offer__text {
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+
+  font-size: 16px;
+  line-height: 1.25;
+  color: #ffffff;
+  font-family: @content-font;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .gift-offer {
+    height: 200px;
+    margin-right: 4%;
+    margin-bottom: 76px;
+    margin-left: 4%;
+  }
+
+
+  .gift-offer__wrapper {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 100%;
+
+    background-image: url("..//img/gift-photo-tablet@1x.jpg");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("..//img/gift-photo-tablet@2x.jpg");
+      background-size: 100% auto;
+    }
+
+
+    &::before {
+      margin: 0;
+      margin-left: 89px;
+    }
+  }
+
+  .gift-offer__text {
+    margin-left: 278px;
+    text-align: left;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .gift-offer {
+    min-width: 245px;
+    height: auto;
+    min-height: 289px;
+
+    margin: 0;
+
+    margin-left: 6.7%;
+  }
+
+  .gift-offer__wrapper {
+    display: block;
+    width: initial;
+
+    height: 100%;
+    margin: 0;
+
+    background-image: url("..//img/gift-photo-desktop@1x.jpg");
+    background-size: 100%;
+
+    &::before {
+      margin: 0 auto;
+      margin-top: 62px;
+      margin-bottom: 61px;
+    }
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("..//img/gift-photo-desktop@2x.jpg");
+      background-size: 100% auto;
+    }
+  }
+
+  .gift-offer__text {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10%;
+    text-align: center;
+  }
+}

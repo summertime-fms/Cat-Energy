@@ -1,0 +1,44 @@
+.copyright__name {
+  display: inline-block;
+
+  font-size: 16px;
+  line-height: 1;
+  font-family: @content-font;
+  color: #444444;
+}
+
+.copyright__image-wrapper {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 38px;
+
+  margin-left: 13px;
+
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+
+    & .copyright__icon {
+      fill: @leaf;
+    }
+  }
+}
+
+.copyright__image {
+  color: #666666;
+}
+
+.copyright__icon {
+  fill: #666666;
+
+  &:hover {
+    fill: @leaf;
+  }
+
+  &:active .copyright__image-wrapper {
+    fill: @leaf;
+    opacity: 0.6;
+  }
+}

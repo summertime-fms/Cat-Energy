@@ -1,0 +1,91 @@
+.examples {
+  position: relative;
+
+  min-width: 320px;
+
+  background-color: #f2f2f2;
+}
+
+.examples__title {
+  margin: 0;
+  padding-top: 29px;
+  margin-bottom: 35px;
+  padding-left: 6.25%;
+}
+
+.examples__text {
+  width: fit-content;
+  margin-bottom: 25px;
+
+  line-height: 18px;
+  font-family: @content-font;
+  color: #444444;
+}
+
+.examples__content {
+  padding-right: 7.25%;
+  padding-left: 6.25%;
+}
+
+@media (min-width: @tablet-width) {
+  .examples {
+    padding: 0;
+
+    background-color: #ffffff;
+  }
+
+  .examples__title {
+    margin-bottom: 65px;
+    padding-top: 39px;
+    padding-left: 4%;
+
+    font-size: 60px;
+    line-height: 1;
+  }
+
+  .examples__text {
+    width: 99%;
+    margin-bottom: 52px;
+
+    color: #444444;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .examples__content {
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .examples__title {
+    .container;
+    margin-top: -13px;
+    margin-bottom: 75px;
+    padding: 0;
+    padding-left: 39px;
+  }
+
+  .examples__inner {
+    background-color: #f2f2f2;
+  }
+
+  .examples__wrapper {
+    .container;
+    display: flex;
+    background-color: #f2f2f2;
+  }
+
+  .examples__content {
+    width: 40%;
+    margin-top: 64px;
+    padding: 0;
+  }
+
+  .examples__text {
+    width: 91%;
+    margin-top: 7px;
+    margin-bottom: 14.5%;
+  }
+}

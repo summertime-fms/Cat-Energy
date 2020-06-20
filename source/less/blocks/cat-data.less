@@ -1,0 +1,31 @@
+.cat-data {
+  margin-bottom: 23px;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.cat-data__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .cat-data {
+    margin-bottom: 48px;
+    padding-left: 71px;
+    padding-right: 71px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cat-data {
+    width: 50%;
+    max-width: @desktop-width / 2;
+    margin-left: calc(50% - 650px);
+    padding: 0 40px;
+  }
+}

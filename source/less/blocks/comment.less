@@ -1,0 +1,52 @@
+.comment {
+  margin-bottom: 24px;
+}
+
+.comment__field {
+  min-width: 280px;
+  min-height: 150px;
+  margin: 0;
+  padding: 14px 14px;
+
+  resize: none;
+}
+
+.comment__title {
+  margin-bottom: 35px;
+}
+
+.comment__field-wrapper {
+  padding-right: 6.2%;
+  padding-left: 6.2%;
+}
+
+@media (min-width: @tablet-width) {
+  .comment {
+    margin-bottom: 61px;
+  }
+
+  .comment__title {
+    margin-bottom: 76px;
+  }
+
+  .comment__field {
+    min-height: 175px;
+    padding: 14px 19px;
+  }
+
+  .comment__field-wrapper {
+    padding-right: 9.1%;
+    padding-left: 9.1%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comment {
+    width: 100%;
+  }
+
+  .comment__field-wrapper {
+    padding: 0;
+    .container;
+  }
+}

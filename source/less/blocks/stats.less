@@ -1,0 +1,156 @@
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 280px;
+  margin-bottom: 37px;
+}
+
+.stats__items {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-width: 280px;
+}
+
+.stats__item {
+  position: relative;
+
+  width: 125px;
+  margin-bottom: 34px;
+  border: 1px solid #cdcdcd;
+
+  text-align: center;
+
+  border-radius: 3px;
+}
+
+.stats__value {
+  display: block;
+  padding-top: 13px;
+  padding-bottom: 17px;
+
+  font-size: 24px;
+  line-height: 24px;
+  color: #111111;
+  text-transform: uppercase;
+}
+
+.stats__property {
+  position: absolute;
+  top: 51px;
+  left: 16%;
+
+  width: 81px;
+  margin-top: -5px;
+
+  font-size: 12px;
+  line-height: 12px;
+  font-family: @content-font;
+  text-align: center;
+  color: #444444;
+  text-transform: lowercase;
+
+  background-color: #f2f2f2;
+}
+
+.stats__expenses {
+  width: fit-content;
+  padding-left: 47px;
+
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #111111;
+}
+
+@media (min-width: @tablet-width) {
+  .stats {
+    flex-direction: row;
+    width: 100%;
+
+    margin-bottom: 59px;
+    margin-right: 30px;
+  }
+
+  .stats__value {
+    padding-top: 15px;
+    padding-bottom: 21px;
+
+    font-size: 30px;
+    line-height: 1.23;
+  }
+
+  .stats__items {
+    justify-content: flex-start;
+    width: 73%;
+  }
+
+  .stats__item {
+    width: 162px;
+
+    margin-right: 42px;
+  }
+
+  .stats__expenses {
+    width: 26%;
+    margin: 0;
+    padding: 0;
+    padding-top: 6px;
+
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: right;
+  }
+
+  .stats__property {
+    left: 10%;
+
+    width: 79%;
+    margin-top: 12px;
+
+    font-size: 14px;
+    line-height: 1;
+
+    background-color: #ffffff;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .stats {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .stats__expenses {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-top: 11px;
+
+    text-align: left;
+  }
+
+  .stats__expenses-price {
+    text-align: left;
+  }
+
+  .stats__items {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .stats__item {
+    margin-right: 42px;
+  }
+
+  .stats__property {
+    left: 11%;
+
+    width: 80%;
+
+    background-color: #f2f2f2;
+  }
+}
